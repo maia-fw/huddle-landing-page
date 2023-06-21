@@ -53,6 +53,10 @@ body {
     padding: 36px;
 }
 
+main {
+  margin-bottom: 64px;
+}
+
 .illustrated {
     display: flex;
     flex-direction: column;
@@ -75,6 +79,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 730px;
+    margin: 0 auto;
 }
 
 .content-hdr {
@@ -104,7 +110,6 @@ body {
     padding: 11px 75px;  
     border-radius: 50px;
     display: inline-block;
-    margin-bottom: 64px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.269022);
 }
 
@@ -113,10 +118,15 @@ body {
     justify-content: center;
 }
 
-.social > img {
+.social-icon {
     width: 28px;
     height: auto;
     margin-right: 10px;
+}
+
+.social-icon:hover > path {
+    fill: var(--soft-magenta);
+    cursor: pointer;
 }
 
 
@@ -131,12 +141,18 @@ body {
     main {
         display: grid;
         grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(2, min-content);
+        grid-template-rows: min-content;
+        gap: 0 60px;
         max-width: 1280px;
+        margin-bottom: 27px;
+    }
+
+    .illustrated {
+      margin: 0;
     }
 
     .mockups {
-        max-width: 696px;
+        max-width: 100%;
         height: auto;
     }
 
@@ -144,6 +160,12 @@ body {
         max-width: 200px;
         height: auto;
         margin-bottom: 104px;
+        align-self: start;
+    }
+
+    .content {
+      align-items: unset;
+      justify-content: center;
     }
     
     .content-hdr {
@@ -153,6 +175,7 @@ body {
         text-align: left;
         line-height: 60px;
         margin-bottom: 24px;
+        max-width: 80%;
     }
 
     .content-text {
@@ -164,6 +187,7 @@ body {
         text-align: left;
         line-height: 27px;
         margin-bottom: 24px;
+        max-width: 80%;
     }
 
     .register-btn {
@@ -173,7 +197,6 @@ body {
         font-weight: 400;
         padding: 13px 64px;  
         border-radius: 28px;
-        display: inline-block;
         box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.258633);
         max-width: 200px;
         margin: 0;
@@ -182,7 +205,10 @@ body {
     .register-btn:hover {
         background-color: var(--soft-magenta);
         color: white;
-        cursor: pointer;
+    }
+
+    .social {
+      justify-content: end;
     }
 }
 
